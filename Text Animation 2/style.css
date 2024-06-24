@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+}
+
+body{
+   min-height: 100vh;
+    background-color: rgb(33, 31, 31);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-size: 14vw;
+    -webkit-text-stroke: 0.1vw rgb(54, 210, 54) ;
+    color: rgb(33, 31, 31);
+    text-transform: uppercase;
+    position: relative;
+    /* min-height: 100vh; */
+    
+    
+}
+h1::before{
+
+    content: attr(data-text);
+    position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+    color: rgb(54, 210, 54);
+
+    -webkit-text-stroke: 0.3vw rgb(54, 210, 54) ;
+    border-right: 2px solid rgb(54, 210, 54);
+    overflow: hidden;
+    animation: animation 7s linear infinite;
+}
+
+@keyframes animation {
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
